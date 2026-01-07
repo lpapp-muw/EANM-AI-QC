@@ -10,6 +10,7 @@ The repository is intended to be updated regularly, with eventually having an EA
 Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
 
 Quantum Computers Explained – Limits of Human Technology – Kurzgesagt – In a Nutshell (2015, ~7 min). An animated overview of why classical computers face physical limits and how quantum bits (qubits) leverage superposition and entanglement to compute beyond those limits. Explains key concepts (qubits, superposition, measurement) in simple terms and discusses potential impacts:
+
 [Quantum Computers Explained – Limits of Human Technology](https://youtu.be/JhHMJCUmq28)
 
 Veritasium has multiple videos about QC and quantum mechanics, utilizing beautiful visuals and intuitive explanations.
@@ -27,9 +28,11 @@ Veritasium has multiple videos about QC and quantum mechanics, utilizing beautif
 [Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
 
 Quantum Computers, Explained Cleo Abram (Huge If True). Tech YouTuber MKBHD joins Abram to tour an IBM quantum computer and ask “dumb” questions. Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
+
 [Quantum Computers, explained with MKBHD](https://www.youtube.com/watch?v=e3fz3dqhN44)
 
 A visually rich exploration of quantum computing through the lens of math. 3Blue1Brown derives how qubit state vectors work and walks through Grover’s search algorithm step by step (advanced):
+
 [But what is quantum computing? (Grover's Algorithm)](https://www.youtube.com/watch?v=RQWpF2Gb-gU)
 
 ## QC Concepts - Teaching Material (Beginner)
@@ -37,16 +40,17 @@ A visually rich exploration of quantum computing through the lens of math. 3Blue
 Once you familiarized yourself with the videos above, you may proceed to access the following teaching material:
 
 IBM Quantum “Understanding Quantum Information and Computation” – Beginner-level video series (free, 16 parts). A rigorous introduction to quantum computing fundamentals, with video lectures by IBM’s John Watrous and accompanying text. Emphasizes core concepts over heavy math, making it ideal for newcomers.
-[Link](https://www.ibm.com/quantum/blog/understanding-quantum-information-and-computation)
 
 [Qiskit playlist - Understanding Quantum Computing](https://www.youtube.com/playlist?list=PLOFEBzvs-VvqKKMXX4vbi4EB1uaErFMSO)
 
 [Basics of Quantum Information](https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information)
 
 FutureLearn – Understanding Quantum Computers – Beginner MOOC (Keio Univ.). An introductory 4-week course covering key quantum computing concepts with minimal mathematics. Explains qubits, superposition, entanglement, and potential applications in plain language.
+
 [Learning Resources on Quantum Computing](https://qosf.org/learn_quantum/)
 
 openHPI: Introduction to Quantum Computing with Qiskit – Beginner course. Free course by IBM Quantum and HPI, teaching basic quantum computing using Qiskit in the cloud. Covers qubits, circuits, and simple algorithms with hands-on demos (no prior QC experience required).
+
 [Introduction to Quantum Computing with Qiskit (with IBM Quantum)](https://open.hpi.de/courses/qc-qiskit2022)
 
 ## Hands-On Tutorials (Beginner to Intermediate)
