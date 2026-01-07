@@ -10,7 +10,6 @@ The repository is intended to be updated regularly, with eventually having an EA
 Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
 
 Quantum Computers Explained – Limits of Human Technology – Kurzgesagt – In a Nutshell (2015, ~7 min). An animated overview of why classical computers face physical limits and how quantum bits (qubits) leverage superposition and entanglement to compute beyond those limits. Explains key concepts (qubits, superposition, measurement) in simple terms and discusses potential impacts:
-
 - [Quantum Computers Explained – Limits of Human Technology](https://youtu.be/JhHMJCUmq28)
 
 Veritasium has multiple videos about QC and quantum mechanics, utilizing beautiful visuals and intuitive explanations.
