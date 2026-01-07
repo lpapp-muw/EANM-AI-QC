@@ -11,29 +11,29 @@ Before doing anything else, we recommend to get familiar with the concept of QC 
 
 Quantum Computers Explained – Limits of Human Technology – Kurzgesagt – In a Nutshell (2015, ~7 min). An animated overview of why classical computers face physical limits and how quantum bits (qubits) leverage superposition and entanglement to compute beyond those limits. Explains key concepts (qubits, superposition, measurement) in simple terms and discusses potential impacts:
 
-[Quantum Computers Explained – Limits of Human Technology](https://youtu.be/JhHMJCUmq28)
+- [Quantum Computers Explained – Limits of Human Technology](https://youtu.be/JhHMJCUmq28)
 
 Veritasium has multiple videos about QC and quantum mechanics, utilizing beautiful visuals and intuitive explanations.
 
-[How Does a Quantum Computer Work?](https://www.youtube.com/watch?v=g_IaVepNDT4)
+- [How Does a Quantum Computer Work?](https://www.youtube.com/watch?v=g_IaVepNDT4)
 
-[What makes quantum computers SO powerful?](https://www.youtube.com/watch?v=-UrdExQW0cs)
+- [What makes quantum computers SO powerful?](https://www.youtube.com/watch?v=-UrdExQW0cs)
 
-[Something Strange Happens When You Trust Quantum Mechanics](https://youtu.be/qJZ1Ez28C-A?si=Ejk39rgtDCFM8ZAC)
+- [Something Strange Happens When You Trust Quantum Mechanics](https://youtu.be/qJZ1Ez28C-A?si=Ejk39rgtDCFM8ZAC)
 
-[Is This What Quantum Mechanics Looks Like?](https://www.youtube.com/watch?v=WIyTZDHuarQ)
+- [Is This What Quantum Mechanics Looks Like?](https://www.youtube.com/watch?v=WIyTZDHuarQ)
 
-[There Is Something Faster Than Light](https://www.youtube.com/watch?v=NIk_0AW5hFU)
+- [There Is Something Faster Than Light](https://www.youtube.com/watch?v=NIk_0AW5hFU)
 
-[Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
+- [Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
 
 Quantum Computers, Explained Cleo Abram (Huge If True). Tech YouTuber MKBHD joins Abram to tour an IBM quantum computer and ask “dumb” questions. Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
 
-[Quantum Computers, explained with MKBHD](https://www.youtube.com/watch?v=e3fz3dqhN44)
+- [Quantum Computers, explained with MKBHD](https://www.youtube.com/watch?v=e3fz3dqhN44)
 
 A visually rich exploration of quantum computing through the lens of math. 3Blue1Brown derives how qubit state vectors work and walks through Grover’s search algorithm step by step (advanced):
 
-[But what is quantum computing? (Grover's Algorithm)](https://www.youtube.com/watch?v=RQWpF2Gb-gU)
+- [But what is quantum computing? (Grover's Algorithm)](https://www.youtube.com/watch?v=RQWpF2Gb-gU)
 
 ## QC Concepts - Teaching Material (Beginner)
 
