@@ -10,7 +10,7 @@ The repository is intended to be updated regularly, with eventually having an EA
 Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
 
 Quantum Computers Explained – Limits of Human Technology – Kurzgesagt – In a Nutshell (2015, ~7 min). An animated overview of why classical computers face physical limits and how quantum bits (qubits) leverage superposition and entanglement to compute beyond those limits. Explains key concepts (qubits, superposition, measurement) in simple terms and discusses potential impacts:
-[Link](https://youtu.be/JhHMJCUmq28)
+[Quantum Computers Explained – Limits of Human Technology](https://youtu.be/JhHMJCUmq28)
 
 Veritasium has multiple videos about QC and quantum mechanics, utilizing beautiful visuals and intuitive explanations.
 
@@ -27,7 +27,7 @@ Veritasium has multiple videos about QC and quantum mechanics, utilizing beautif
 [Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
 
 Quantum Computers, Explained Cleo Abram (Huge If True). Tech YouTuber MKBHD joins Abram to tour an IBM quantum computer and ask “dumb” questions. Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
-[Link](https://youtu.be/e3fz3dqhN44?si=HkJHixwaXMbOnbdj)
+[Quantum Computers, explained with MKBHD](https://www.youtube.com/watch?v=e3fz3dqhN44)
 
 A visually rich exploration of quantum computing through the lens of math. 3Blue1Brown derives how qubit state vectors work and walks through Grover’s search algorithm step by step (advanced):
 [But what is quantum computing? (Grover's Algorithm)](https://www.youtube.com/watch?v=RQWpF2Gb-gU)
