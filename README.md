@@ -44,10 +44,10 @@ IBM Quantum “Understanding Quantum Information and Computation” – Beginner
 [Basics of Quantum Information](https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information)
 
 FutureLearn – Understanding Quantum Computers – Beginner MOOC (Keio Univ.). An introductory 4-week course covering key quantum computing concepts with minimal mathematics. Explains qubits, superposition, entanglement, and potential applications in plain language.
-[Link](https://qosf.org/learn_quantum/)
+[Learning Resources on Quantum Computing](https://qosf.org/learn_quantum/)
 
 openHPI: Introduction to Quantum Computing with Qiskit – Beginner course. Free course by IBM Quantum and HPI, teaching basic quantum computing using Qiskit in the cloud. Covers qubits, circuits, and simple algorithms with hands-on demos (no prior QC experience required).
-[Link](https://open.hpi.de/courses/qc-qiskit2022)
+[Introduction to Quantum Computing with Qiskit (with IBM Quantum)](https://open.hpi.de/courses/qc-qiskit2022)
 
 ## Hands-On Tutorials (Beginner to Intermediate)
 
