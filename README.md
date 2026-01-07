@@ -36,8 +36,12 @@ A visually rich exploration of quantum computing through the lens of math. 3Blue
 
 Once you familiarized yourself with the videos above, you may proceed to access the following teaching material:
 
-IBM Quantum “Understanding Quantum Information and Computation” – Beginner-level video series (free, 16 parts). A rigorous yet accessible introduction to quantum computing fundamentals, with video lectures by IBM’s John Watrous and accompanying text. Emphasizes core concepts over heavy math, making it ideal for newcomers.
+IBM Quantum “Understanding Quantum Information and Computation” – Beginner-level video series (free, 16 parts). A rigorous introduction to quantum computing fundamentals, with video lectures by IBM’s John Watrous and accompanying text. Emphasizes core concepts over heavy math, making it ideal for newcomers.
 [Link](https://www.ibm.com/quantum/blog/understanding-quantum-information-and-computation)
+
+[Qiskit playlist - Understanding Quantum Computing](https://www.youtube.com/playlist?list=PLOFEBzvs-VvqKKMXX4vbi4EB1uaErFMSO)
+
+[Basics of Quantum Information(https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information)
 
 FutureLearn – Understanding Quantum Computers – Beginner MOOC (Keio Univ.). An introductory 4-week course covering key quantum computing concepts with minimal mathematics. Explains qubits, superposition, entanglement, and potential applications in plain language.
 [Link](https://qosf.org/learn_quantum/)
