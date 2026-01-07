@@ -9,7 +9,7 @@ The repository is intended to be updated regularly, with eventually having an EA
 > The Dawn of Quantum AI in Nuclear Medicine: an EANM Perspective. L. Papp, D. Visvikis, M. Sollini, K. Shi, M. Kirienko. The EANM Journal, 2026.
 
 ## QC Concepts - Youtube videos
-Before doing anything else, we recommend to get familiar with the concept of QC by going throug hthese videos:
+Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
 
 Quantum Computers Explained – Limits of Human Technology – Kurzgesagt – In a Nutshell (2015, ~7 min). An animated overview of why classical computers face physical limits and how quantum bits (qubits) leverage superposition and entanglement to compute beyond those limits. Explains key concepts (qubits, superposition, measurement) in simple terms and discusses potential impacts:
 [Link](https://youtu.be/JhHMJCUmq28)
@@ -36,6 +36,8 @@ A visually rich exploration of quantum computing through the lens of math. 3Blue
 
 ## QC Concepts - Teaching Material (Beginner)
 
+Once you familiarized yourself with the videos above, you may proceed to access the following teaching material:
+
 IBM Quantum “Understanding Quantum Information and Computation” – Beginner-level video series (free, 16 parts). A rigorous yet accessible introduction to quantum computing fundamentals, with video lectures by IBM’s John Watrous and accompanying text. Emphasizes core concepts over heavy math, making it ideal for newcomers.
 [Link](https://www.ibm.com/quantum/blog/understanding-quantum-information-and-computation)
 
@@ -46,6 +48,8 @@ openHPI: Introduction to Quantum Computing with Qiskit – Beginner course. Free
 [Link](https://open.hpi.de/courses/qc-qiskit2022)
 
 ## Hands-On Tutorials (Beginner to Intermediate)
+
+Once you are uo-to more coding, try the following resources:
 
 Qiskit Textbook & Tutorials – Interactive Jupyter Notebooks (Beginner-friendly). The open-source Qiskit Textbook offers step-by-step notebooks from basic quantum circuits to algorithms.
 [Link](https://medium.com/qiskit/how-to-start-experimenting-with-quantum-image-processing-283dddcc6ba0) and
@@ -64,9 +68,6 @@ The interactive Quantum Codebook is also available for guided practice on topics
 AWS Braket Example: Hybrid Quantum ML – Intermediate tutorial (AWS platform). Amazon Braket’s public examples include a Quantum Machine Learning Hybrid Jobs notebook demonstrating a typical hybrid workflow (classical optimizer + quantum circuit model) on AWS. It guides users through data upload, setting hyperparameters, and running a simple QML algorithm on cloud simulators or QPUs. (Requires an AWS account; free tier available for small-scale use):
 [Link](https://github.com/amazon-braket/amazon-braket-examples)
 
-
-## Code Repositories Focusing On Quantum ML & QNN Workflows
-
 Hybrid QNN on MNIST (Qiskit + PyTorch) – Platform: Qiskit, Skill: Intermediate. A lightweight community example of a quantum-classical neural network for image classification. Implements a classical CNN feature extractor with a quantum fully-connected layer for MNIST digit data: 
 [Link](https://github.com/dohun-qml/quantum-neural-network)
 
@@ -78,6 +79,8 @@ Qiskit Community Tutorials – QSVM & VQE demos – Platform: Qiskit, Skill: Beg
 
 
 ## Reviews - Medical (Imaging) Use Cases
+
+In case you are interested in where the field stands, read the following reviews:
 
 Review of medical image processing using quantum-enabled algorithms (2024) – Fei Yan et al. A comprehensive review of how quantum and quantum-inspired algorithms enhance traditional medical image processing, covering applications in disease diagnosis and medical image security. The authors survey advances in quantum-assisted image analysis (e.g. segmentation, optimization methods) and outline current performance limitations and future development plans for quantum techniques in imaging:
 [Link](https://link.springer.com/article/10.1007/s10462-024-10932-x)
