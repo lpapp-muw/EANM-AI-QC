@@ -4,7 +4,11 @@ EANM AI Committee - Quantum Computing Engagement Plan
 ## Introduction
 This repository contains basic teaching material, tutorials and educational videos for those interested to engage with quantum computing (QC) within the Euopean Association of Nuclear Medicine (EANM). Thus, the collection of materials here is intended for beginners with little to no knowledge in QC. 
 In addition, we also share advanced materials containing tutorials, hands-on as well as code repositories.
-The repository is intended to be updated regularly, with eventually having an EANM AI Committee-created code base for QC as well.
+The repository is intended to be updated regularly, with eventually having an EANM AI Committee-created code base for QC as well. The initial version was made for the perspective paper:
+
+> The Dawn of Quantum AI in Nuclear Medicine: an EANM Perspective. L. Papp, D. Visvikis, M. Sollini, K. Shi, M. Kirienko. The EANM Journal, 2026.
+
+
 
 ## QC Concepts (Beginner)
 
@@ -37,7 +41,7 @@ AWS Braket Example: Hybrid Quantum ML – Intermediate tutorial (AWS platform). 
 [Link](https://github.com/amazon-braket/amazon-braket-examples)
 
 
-## Simple Code Repositories (Quantum ML & QNN Workflows)
+## Code Repositories Focusing On Quantum ML & QNN Workflows
 
 Hybrid QNN on MNIST (Qiskit + PyTorch) – Platform: Qiskit, Skill: Intermediate. A lightweight community example of a quantum-classical neural network for image classification. Implements a classical CNN feature extractor with a quantum fully-connected layer for MNIST digit data: 
 [Link](https://github.com/dohun-qml/quantum-neural-network)
@@ -60,6 +64,6 @@ Quantum machine learning in medical image analysis: A survey (2023) – Lin Wei 
 Quantum algorithms and complexity in healthcare applications: a systematic review with machine learning-optimized analysis (2025) – Agostino Marengo & Vito Santamato – Frontiers in Computer Science. Analyzing 63 studies, the authors identify two dominant themes: quantum computing for AI in healthcare (e.g. quantum machine learning for diagnostics and predictive analytics) and quantum computing for health data security (e.g. quantum cryptography for EHR/privacy). The review highlights theoretical advances from quantum-enhanced algorithms for biomedical data analysis to blockchain-like security frameworks, and it concludes that quantum algorithms show promise to optimize complex diagnostic computations and protect medical data:
 [Link](https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1584114/full)
 
-Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (Basel). An open-access review covering the state of quantum computing in medical research and practice. It outlines fundamental QC concepts (qubits, superposition, entanglement) and surveys milestone applications: from quantum-accelerated drug discovery and molecular modeling in chemistry/proteomics, to quantum approaches in genomics (e.g. DNA sequencing) and medical diagnostics. Quantum machine learning techniques are explained (including quantum-enhanced imaging and radiotherapy simulations), and the article discusses practical challenges such as hardware scalability, error correction, and integration into clinics. Looking ahead, Chow describes prospects for quantum–classical hybrid systems and emerging quantum hardware that could accelerate adoption of QC in personalized therapy planning and complex biological simulations:
+Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (Basel). An open-access review covering the state of quantum computing in medical research and practice. It outlines fundamental QC concepts (qubits, superposition, entanglement) and surveys milestone applications: from quantum-accelerated drug discovery and molecular modeling in chemistry/proteomics, to quantum approaches in genomics (e.g. DNA sequencing) and medical diagnostics. Quantum machine learning techniques are explained (including quantum-enhanced imaging and radiotherapy simulations), and the article discusses practical challenges such as hardware scalability, error correction, and integration into clinics. The paper describes prospects for quantum–classical hybrid systems and emerging quantum hardware that could accelerate adoption of QC in personalized therapy planning and complex biological simulations:
 [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC11586987/)
 
