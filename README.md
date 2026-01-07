@@ -41,7 +41,7 @@ IBM Quantum “Understanding Quantum Information and Computation” – Beginner
 
 [Qiskit playlist - Understanding Quantum Computing](https://www.youtube.com/playlist?list=PLOFEBzvs-VvqKKMXX4vbi4EB1uaErFMSO)
 
-[Basics of Quantum Information(https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information)
+[Basics of Quantum Information](https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information)
 
 FutureLearn – Understanding Quantum Computers – Beginner MOOC (Keio Univ.). An introductory 4-week course covering key quantum computing concepts with minimal mathematics. Explains qubits, superposition, entanglement, and potential applications in plain language.
 [Link](https://qosf.org/learn_quantum/)
