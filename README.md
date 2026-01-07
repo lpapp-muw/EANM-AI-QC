@@ -26,7 +26,7 @@ Veritasium has multiple videos about QC and quantum mechanics, utilizing beautif
 
 [Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
 
-Quantum Computers, Explained with MKBHD – Cleo Abram (Huge If True) feat. Marques Brownlee (2023, 16:24 min). Tech YouTuber MKBHD joins Cleo to tour an IBM quantum computer and ask “dumb” questions. Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
+Quantum Computers, Explained Cleo Abram (Huge If True). Tech YouTuber MKBHD joins Abram to tour an IBM quantum computer and ask “dumb” questions. Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
 [Link](https://youtu.be/e3fz3dqhN44?si=HkJHixwaXMbOnbdj)
 
 A visually rich exploration of quantum computing through the lens of math. 3Blue1Brown derives how qubit state vectors work and walks through Grover’s search algorithm step by step (advanced):
