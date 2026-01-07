@@ -49,7 +49,7 @@ openHPI: Introduction to Quantum Computing with Qiskit – Beginner course. Free
 
 ## Hands-On Tutorials (Beginner to Intermediate)
 
-Once you are uo-to more coding, try the following resources:
+Once you are up-to more coding, try the following resources:
 
 Qiskit Textbook & Tutorials – Interactive Jupyter Notebooks (Beginner-friendly). The open-source Qiskit Textbook offers step-by-step notebooks from basic quantum circuits to algorithms.
 [Link](https://medium.com/qiskit/how-to-start-experimenting-with-quantum-image-processing-283dddcc6ba0) and
