@@ -17,13 +17,19 @@ Quantum Computers Explained – Limits of Human Technology – Kurzgesagt – In
 Veritasium has multiple videos about QC and quantum mechanics, utilizing beautiful visuals and intuitive explanations.
 
 Quantum Computing:
+
 [How Does a Quantum Computer Work?](https://www.youtube.com/watch?v=g_IaVepNDT4)
+
 [What makes quantum computers SO powerful?](https://www.youtube.com/watch?v=-UrdExQW0cs)
 
 Quantum Mechanics and Physics:
+
 [Something Strange Happens When You Trust Quantum Mechanics](https://youtu.be/qJZ1Ez28C-A?si=Ejk39rgtDCFM8ZAC)
+
 [Is This What Quantum Mechanics Looks Like?](https://www.youtube.com/watch?v=WIyTZDHuarQ)
+
 [There Is Something Faster Than Light](https://www.youtube.com/watch?v=NIk_0AW5hFU)
+
 [Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
 
 Quantum Computers, Explained with MKBHD – Cleo Abram (Huge If True) feat. Marques Brownlee (2023, 16:24 min). Tech YouTuber MKBHD joins Cleo to tour an IBM quantum computer and ask “dumb” questions. Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
