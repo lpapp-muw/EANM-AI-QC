@@ -16,13 +16,9 @@ Quantum Computers Explained – Limits of Human Technology – Kurzgesagt – In
 
 Veritasium has multiple videos about QC and quantum mechanics, utilizing beautiful visuals and intuitive explanations.
 
-Quantum Computing:
-
 [How Does a Quantum Computer Work?](https://www.youtube.com/watch?v=g_IaVepNDT4)
 
 [What makes quantum computers SO powerful?](https://www.youtube.com/watch?v=-UrdExQW0cs)
-
-Quantum Mechanics and Physics:
 
 [Something Strange Happens When You Trust Quantum Mechanics](https://youtu.be/qJZ1Ez28C-A?si=Ejk39rgtDCFM8ZAC)
 
