@@ -7,10 +7,13 @@ The repository is intended to be updated regularly, with eventually having an EA
 > The Dawn of Quantum AI in Nuclear Medicine: an EANM Perspective. L. Papp, D. Visvikis, M. Sollini, K. Shi, M. Kirienko. The EANM Journal, 2026.
 
 
-##Table of Contents
+in [Section `Features`](#feature)
 
-[QC Concepts - Youtube videos](## QC Concepts - Youtube videos)
-[QC Concepts - Teaching Material (Beginner)](## QC Concepts - Teaching Material (Beginner))
+## Feature
+
+If you are new to the topic of QC, we recommend to process this repository from top-to-bottom, whiel following the contents below.
+If you are ready to engage with source code which is custom-tailored for Nuclear Medicine use cases, see
+[Section `Nuclear Medicine USe Cases`](#Nuclear Medicine Use Cases)
 
 ## QC Concepts - Youtube videos
 Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
@@ -96,3 +99,5 @@ Quantum algorithms and complexity in healthcare applications: a systematic revie
 
 Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (Basel). An open-access review covering the state of quantum computing in medical research and practice. It outlines fundamental QC concepts (qubits, superposition, entanglement) and surveys milestone applications: from quantum-accelerated drug discovery and molecular modeling in chemistry/proteomics, to quantum approaches in genomics (e.g. DNA sequencing) and medical diagnostics. Quantum machine learning techniques are explained (including quantum-enhanced imaging and radiotherapy simulations), and the article discusses practical challenges such as hardware scalability, error correction, and integration into clinics. The paper describes prospects for quantum–classical hybrid systems and emerging quantum hardware that could accelerate adoption of QC in personalized therapy planning and complex biological simulations:
 [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC11586987/)
+
+## Nuclear Medicine Use Cases
