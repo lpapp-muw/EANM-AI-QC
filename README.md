@@ -6,6 +6,12 @@ The repository is intended to be updated regularly, with eventually having an EA
 
 > The Dawn of Quantum AI in Nuclear Medicine: an EANM Perspective. L. Papp, D. Visvikis, M. Sollini, K. Shi, M. Kirienko. The EANM Journal, 2026.
 
+
+##Table of Contents
+
+[QC Concepts - Youtube videos](## QC Concepts - Youtube videos)
+[QC Concepts - Teaching Material (Beginner)](## QC Concepts - Teaching Material (Beginner))
+
 ## QC Concepts - Youtube videos
 Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
 
