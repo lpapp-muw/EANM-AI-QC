@@ -10,7 +10,7 @@ The repository is intended to be updated regularly, with eventually having an EA
 If you are new to the topic of QC, we recommend to process this repository from top-to-bottom, by following up with the contents below.
 
 If you are ready to engage with our source code which is custom-tailored for Nuclear Medicine use cases, see
-[Section `Nuclear Medicine USe Cases (Code)`](#nuclear-medicine-use-cases-code).
+[Section `Nuclear Medicine Use Cases (Code)`](#nuclear-medicine-use-cases-code).
 
 ## QC Concepts - Youtube videos
 Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
