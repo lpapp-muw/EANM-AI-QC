@@ -9,7 +9,7 @@ The repository is intended to be updated regularly, with eventually having an EA
 
 If you are new to the topic of QC, we recommend to process this repository from top-to-bottom, whiel following the contents below.
 If you are ready to engage with source code which is custom-tailored for Nuclear Medicine use cases, see
-[Section `Code`](##Code)
+[Section `Nuclear Medicine USe Cases (Code)`](#nuclear-medicine-use-cases-code)
 
 ## QC Concepts - Youtube videos
 Before doing anything else, we recommend to get familiar with the concept of QC by going through these videos:
@@ -96,4 +96,4 @@ Quantum algorithms and complexity in healthcare applications: a systematic revie
 Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (Basel). An open-access review covering the state of quantum computing in medical research and practice. It outlines fundamental QC concepts (qubits, superposition, entanglement) and surveys milestone applications: from quantum-accelerated drug discovery and molecular modeling in chemistry/proteomics, to quantum approaches in genomics (e.g. DNA sequencing) and medical diagnostics. Quantum machine learning techniques are explained (including quantum-enhanced imaging and radiotherapy simulations), and the article discusses practical challenges such as hardware scalability, error correction, and integration into clinics. The paper describes prospects for quantum–classical hybrid systems and emerging quantum hardware that could accelerate adoption of QC in personalized therapy planning and complex biological simulations:
 [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC11586987/)
 
-## Code
+## Nuclear Medicine Use Cases (Code)
