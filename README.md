@@ -99,7 +99,7 @@ Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (
 
 ## Papers - Quantum Machine Learning
 
-For reading a large selection of QC papers relate to AI/ML, we recommend to follow-up with Christophe Pere's git repository which is actively maintained:
+For reading a large selection of QC papers related to AI/ML, we recommend to follow-up with Christophe Pere's git repository which is actively maintained:
 
 https://github.com/Christophe-pere/Roadmap-to-QML
 
