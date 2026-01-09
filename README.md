@@ -214,7 +214,7 @@ This repo snapshot includes:
 
 ### Notes on included example data
 
-#### Real tabular dataset (radiomics; PSMA-11 PET)
+#### Real tabular dataset (radiomics PSMA-11 PET)
 
 The repository includes a **real tabular example dataset** containing **anonymized PSMA-11 PET radiomic features** extracted from **primary prostate lesions**, with an associated **binary label** intended to predict **Gleason risk**.
 
@@ -248,7 +248,7 @@ To avoid generating overly complex circuits in a simulator environment:
 ### QCNN variants: muw vs alt
 
 Both QCNN options (**muw** or **alt**) share the same NIfTI loader and preprocessing, but differ in circuit design.
-Here **muw** implies the qCNN models investiaged by the Medical University of Vienna, Applied Quantum Computing Group (laszlo.papp@meduniwien.ac.at) - menuscript reporting the results is currently in review.
+Here **muw** implies the qCNN models investiaged by the Medical University of Vienna, Applied Quantum Computing Group (laszlo.papp@meduniwien.ac.at) - manuscript reporting the results is currently in review.
 
 
 #### muw (MUW-like)
