@@ -97,9 +97,9 @@ Quantum algorithms and complexity in healthcare applications: a systematic revie
 Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (Basel). An open-access review covering the state of quantum computing in medical research and practice. It outlines fundamental QC concepts (qubits, superposition, entanglement) and surveys milestone applications: from quantum-accelerated drug discovery and molecular modeling in chemistry/proteomics, to quantum approaches in genomics (e.g. DNA sequencing) and medical diagnostics. Quantum machine learning techniques are explained (including quantum-enhanced imaging and radiotherapy simulations), and the article discusses practical challenges such as hardware scalability, error correction, and integration into clinics. The paper describes prospects for quantum–classical hybrid systems and emerging quantum hardware that could accelerate adoption of QC in personalized therapy planning and complex biological simulations:
 [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC11586987/)
 
-## Papers - Quantum Computing
+## Papers - Quantum Machine Learning
 
-For reading a large selection of QC papers, we recommend to follow-up with Christophe Pere's git repository which is actively maintained:
+For reading a large selection of QC papers relate to AI/ML, we recommend to follow-up with Christophe Pere's git repository which is actively maintained:
 
 https://github.com/Christophe-pere/Roadmap-to-QML
 
