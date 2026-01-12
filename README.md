@@ -31,7 +31,7 @@ Veritasium has multiple videos about QC and quantum mechanics, utilizing beautif
 
 - [Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
 
-Quantum Computers, Explained Cleo Abram (Huge If True). Tech YouTuber MKBHD joins Abram to tour an IBM quantum computer and ask “dumb” questions. Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
+Quantum Computers, Explained Cleo Abram (Huge If True).Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
 - [Quantum Computers, explained with MKBHD](https://www.youtube.com/watch?v=e3fz3dqhN44)
 
 A visually rich exploration of quantum computing through the lens of math. 3Blue1Brown derives how qubit state vectors work and walks through Grover’s search algorithm step by step (advanced):
@@ -81,7 +81,7 @@ Qiskit Community Tutorials – QSVM & VQE demos – Platform: Qiskit, Skill: Beg
 [Link](https://github.com/qiskit-community/ibm-quantum-challenge-fall-2021/blob/main/content/challenge-3/challenge-3.ipynb)
 
 
-## Reviews - Medical (Imaging) Use Cases
+## Reviews & Reviews
 
 In case you are interested in where the field stands, read the following reviews:
 
@@ -96,8 +96,6 @@ Quantum algorithms and complexity in healthcare applications: a systematic revie
 
 Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (Basel). An open-access review covering the state of quantum computing in medical research and practice. It outlines fundamental QC concepts (qubits, superposition, entanglement) and surveys milestone applications: from quantum-accelerated drug discovery and molecular modeling in chemistry/proteomics, to quantum approaches in genomics (e.g. DNA sequencing) and medical diagnostics. Quantum machine learning techniques are explained (including quantum-enhanced imaging and radiotherapy simulations), and the article discusses practical challenges such as hardware scalability, error correction, and integration into clinics. The paper describes prospects for quantum–classical hybrid systems and emerging quantum hardware that could accelerate adoption of QC in personalized therapy planning and complex biological simulations:
 [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC11586987/)
-
-## Papers - Quantum Machine Learning
 
 For reading a large selection of QC papers related to AI/ML, we recommend to follow-up with Christophe Pere's git repository which is actively maintained:
 
