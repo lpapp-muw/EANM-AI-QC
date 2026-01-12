@@ -152,10 +152,11 @@ The demo runner **does not run SHAP/LIME explanations**. It only trains models, 
 
 Notebooks are provided in `notebooks/`:
 
-- `00_quickstart.ipynb`: end-to-end demo (no explanations)
-- `01_tabular_demo.ipynb`: real tabular radiomics workflow
-- `02_nifti_demo.ipynb`: NIfTI PET±mask workflow (synthetic mockups)
-- `03_explainability.ipynb`: SHAP/LIME step (separate; can be slow)
+- `00_quickstart.ipynb`: run full demo and plot test confusion matrices + ROC (no SHAP/LIME)
+- `01_tabular_demo.ipynb`: tabular run + plots + per-case test predictions
+- `02_nifti_demo.ipynb`: NIfTI PET±mask run + plots (synthetic mockups)
+- `03_explainability.ipynb`: SHAP/LIME generation + visual review (separate; can be slow)
+- `04_results_dashboard.ipynb`: dashboard over `Results/` (tables, confusion matrices, ROC, SHAP/LIME if present)
 
 Use notebooks for **exploration, debugging, and transparent reporting** (e.g., inspecting `Results/*.csv`, looking at per-case predictions).
 For **batch runs** or long simulations, prefer the CLI scripts (`qnm_qai.py`, `examples/*.sh`) and treat notebooks as a front-end that calls the same commands.
