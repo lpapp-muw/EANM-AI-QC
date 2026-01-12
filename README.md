@@ -105,9 +105,7 @@ https://github.com/Christophe-pere/Roadmap-to-QML
 
 ## Nuclear Medicine Use Cases (Code)
 
-# EANM-AI-QC
-
-Unified reference implementation for quantum ML workflows relevant to nuclear medicine:
+The EANM-AI-QC folder contains a unified reference implementation for quantum ML workflows relevant to nuclear medicine:
 
 - Tabular quantum ML models (amplitude-encoded quantum kernel SVM and QCNN variants on feature vectors)
 - NIfTI PET ± mask QCNN pipelines (amplitude encoding of flattened volumes)
