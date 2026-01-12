@@ -1,4 +1,4 @@
-# EANM AI Committee - Quantum Computing Engagement Plan
+# EANM AI Committee - Quantum Computing Engagement Resources
 
 This repository contains basic teaching material, tutorials and educational videos for those interested to engage with quantum computing (QC) within the Euopean Association of Nuclear Medicine (EANM). Thus, the collection of materials here is intended for beginners with little to no knowledge in QC. 
 In addition, we also share advanced materials containing tutorials, hands-on as well as code repositories.
