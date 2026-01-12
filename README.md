@@ -105,20 +105,34 @@ https://github.com/Christophe-pere/Roadmap-to-QML
 
 ## Nuclear Medicine Use Cases (Code)
 
-The folder EANM-AI-QC is a unified reference implementation for:
-- **Tabular quantum ML** (quantum-kernel SVM)
-- **3D NIfTI PET quantum CNNs** (PET ± ROI mask pairs)
+# EANM-AI-QC
 
-This code runs quantum circuits on a classical simulator by default (PennyLane `default.qubit`).
-It prints explicit evaluation diagnostics (train/test confusion matrices and per-test-case predictions)
-to prevent misinterpretation of metrics vs inference-only predictions.
+Unified reference implementation for quantum ML workflows relevant to nuclear medicine:
 
-### Quick start (Ubuntu)
+- Tabular quantum ML models (amplitude-encoded quantum kernel SVM and QCNN variants on feature vectors)
+- NIfTI PET ± mask QCNN pipelines (amplitude encoding of flattened volumes)
 
-```bash
-sudo apt update
-sudo apt install -y python3 python3-venv python3-pip
-```
+By default, quantum circuits run on a classical simulator (PennyLane `default.qubit`).
+
+## Repository structure (modular)
+
+- `eanm_ai_qc/io/`
+  - `tabular.py`: tabular CSV loader
+  - `nifti.py`: NIfTI PET±mask loader
+  - `encoding.py`: amplitude encoding (pad to `2^n` + L2 normalization)
+- `eanm_ai_qc/models/`
+  - `pl_kernel_svm.py`: PennyLane amplitude-kernel SVM
+  - `pl_qcnn_muw.py`: MUW-like QCNN (ArbitraryUnitary head)
+  - `pl_qcnn_alt.py`: ALT QCNN (StronglyEntanglingLayers head)
+- `eanm_ai_qc/explain/`
+  - `shap_explain.py`: SHAP (model-agnostic, permutation explainer)
+  - `lime_explain.py`: LIME (tabular explainer)
+- `eanm_ai_qc/runner.py`
+  - experiment runner writing metrics and predictions into `Results/` (and optionally SHAP/LIME when enabled)
+
+The CLI entry point is `qnm_qai.py`.
+
+## Installation
 
 ```bash
 cd ~/EANM-AI-QC
@@ -128,163 +142,211 @@ python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 ```
 
-### Generate synthetic demo inputs
-
-```bash
-python3 examples/make_synthetic_tabular.py
-python3 examples/make_synthetic_nifti.py
-```
-
-### Run all examples
+## One-command demo run
 
 ```bash
 bash examples/run_all_examples.sh
 ```
 
-Outputs:
-- models saved under `models/`
-- prediction CSVs saved under `outputs/`
+The demo runner **does not run SHAP/LIME explanations**. It only trains models, evaluates them, and writes performance + predictions to `Results/`.
 
-### Tabular input requirements
+## Jupyter notebooks
 
-- CSV/TSV with a label column named **`label`** (default).
-- If your label column has another name, pass `--label-col <name>` during training.
-- Inference CSVs can omit the label column.
+Notebooks are provided in `notebooks/`:
 
-### NIfTI input requirements (PET ± mask)
+- `00_quickstart.ipynb`: end-to-end demo (no explanations)
+- `01_tabular_demo.ipynb`: real tabular radiomics workflow
+- `02_nifti_demo.ipynb`: NIfTI PET±mask workflow (synthetic mockups)
+- `03_explainability.ipynb`: SHAP/LIME step (separate; can be slow)
 
-Supported layouts:
+Use notebooks for **exploration, debugging, and transparent reporting** (e.g., inspecting `Results/*.csv`, looking at per-case predictions).
+For **batch runs** or long simulations, prefer the CLI scripts (`qnm_qai.py`, `examples/*.sh`) and treat notebooks as a front-end that calls the same commands.
 
-#### A) Explicit split
+Typical setup (make sure Jupyter uses the same `.venv` as the terminal):
 
-```
-dataset_root/
-  Train/
-    case001_0_PET.nii.gz
-    case001_0_mask.nii.gz   (optional)
-  Test/
-    ...
-```
-
-#### B) Flat layout (internal split)
-
-```
-dataset_root/
-  case001_0_PET.nii.gz
-  case001_0_mask.nii.gz
-  ...
+```bash
+cd ~/EANM-AI-QC
+source .venv/bin/activate
+python -m pip install jupyterlab ipykernel
+python -m ipykernel install --user --name eanm-ai-qc --display-name "EANM-AI-QC (.venv)"
+jupyter lab
 ```
 
-#### Mask semantics
+Then select the `EANM-AI-QC (.venv)` kernel and open the notebooks.
 
-- `mask > 0` means voxel belongs to VOI
-- `mask == 0` means voxel is excluded
-- applied as: `PET := where(mask>0, PET, 0)`
+## Explanations (SHAP/LIME)
 
-If no mask exists (or masks are disabled via `--mask-pattern NONE`) the full PET volume is used.
+Run explanations separately *after* the models exist:
 
-#### Resolution handling
+```bash
+bash examples/run_explain_all.sh
+```
 
-- no forced image resolution
-- flatten volume and pad to `2^n` for amplitude encoding
-- optional resampling via `--target-shape Z Y X` (requires SciPy)
+Outputs are written under:
+- `Results/<dataset>/<method>/explain/shap/`
+- `Results/<dataset>/<method>/explain/lime/`
 
-### Output CSV interpretation
+Runtime note: SHAP/LIME can take minutes to hours on a CPU simulator. The quantum-kernel SVM is the slowest because each explanation requires many kernel circuit evaluations.
 
-Prediction CSV columns:
-- `id`: sample id (row index for tabular; case id for NIfTI)
-- `prob_1`: predicted probability for class `labelmap.classes[1]`
-- `pred_01`: thresholded prediction (0/1 at 0.5)
-- `pred_label`: predicted label token in original label namespace
+To control runtime, call the underlying Python script with caps:
 
-### Evaluation prints during training
+```bash
+python3 examples/run_explain_all.py   --results-dir Results   --max-features 16   --max-test-samples 2   --background-samples 8   --shap-max-evals 256   --lime-num-samples 300
+```
 
-The `train` command prints:
-- TRAIN and TEST confusion matrices (clearly labeled)
-- sensitivity, specificity, PPV, NPV
-- per-test-case (id, prob_1, pred, true)
+## Runtime expectations and controls
 
-This is the correct way to connect aggregate metrics and individual predictions.
+If you are used to classical Python ML, these runs can feel unexpectedly slow. This is normal for *quantum circuit simulation* and for model-agnostic explainability.
 
+### Why it can be slow
 
-### Included real tabular dataset (FDB/LDB)
+- **Quantum circuits are simulated** (PennyLane `default.qubit`). Simulation cost grows rapidly with the number of qubits because state vectors scale as `2^n`.
+- **Amplitude encoding pads to `2^n`**. Example: 306 tabular features are padded to 512 amplitudes → **9 qubits**.
+- **Quantum-kernel SVM is expensive**:
+  - training requires a full kernel matrix `K_train` with roughly `N_train²/2` quantum circuit evaluations
+  - testing/inference requires `N_test × N_train` evaluations
+- **SHAP and LIME multiply cost** because they call the model many times on perturbed inputs:
+  - model-agnostic explainers typically require hundreds to thousands of model evaluations per explained sample
+  - for the **kernel SVM**, each model evaluation internally computes kernels against all training reference vectors, so the explainer overhead can dominate runtime
 
-This repo snapshot includes:
-- `demo_data/tabular/raw/FDB.csv`
-- `demo_data/tabular/raw/LDB.csv`
-- `demo_data/tabular/real_train.csv`
-- `demo_data/tabular/real_infer.csv`
-- `demo_data/tabular/real_feature_map.csv`
+### What to do in practice
 
-`examples/run_all_examples.sh` trains the tabular model on `real_train.csv`.
+- Fast run (no explainability):
+  ```bash
+  python3 qnm_qai.py run --input <data> --methods pl_kernel_svm,pl_qcnn_alt,pl_qcnn_muw --no-explain
+  ```
+- Reduce training rows while debugging:
+  ```bash
+  python3 qnm_qai.py run --input <data> --max-samples-per-method 20 --no-explain
+  ```
+- Reduce qubit count for QCNN on tabular data (optional runtime control):
+  ```bash
+  python3 qnm_qai.py run --input <csv> --max-features-qcnn-tabular 64 --no-explain
+  ```
+- Keep NIfTI inputs small (VOIs around lesions rather than whole-body) to avoid large amplitude vectors → too many qubits.
 
-### Notes on included example data
+### Progress output
 
-#### Real tabular dataset (radiomics PSMA-11 PET)
+The runner prints basic progress messages:
+- `[RUN] ...` high-level phases per dataset and method
+- `[pl_kernel_svm] ...` kernel matrix build progress
+- `[pl_qcnn_alt] epoch ...` / `[pl_qcnn_muw] epoch ...` training epochs
+- `[SHAP] ...` / `[LIME] ...` when explanations are run
 
-The repository includes a **real tabular example dataset** containing **anonymized PSMA-11 PET radiomic features** extracted from **primary prostate lesions**, with an associated **binary label** intended to predict **Gleason risk**.
+## No preprocessing
 
-This real tabular data example is sourced from the OSF repository:
+The code takes the input features **as-is**. This means no scaling, standardization, feature engineering or e.g. imputation are done.
+
+Minimal *encoding steps* are still required because quantum circuits cannot accept invalid numbers and amplitude encoding requires a normalized state vector:
+
+- `NaN/Inf` values are replaced with `0.0`
+- vectors are zero-padded to length `2^n`
+- vectors are L2-normalized to form a valid amplitude-encoded quantum state
+
+## Real tabular dataset (radiomics, PSMA-11 PET)
+
+The repository includes a real tabular example dataset containing **anonymized PSMA-11 PET radiomic features**
+extracted from **primary prostate lesions**, with an associated **binary label** intended to predict **Gleason risk**.
+
+Source:
 - https://osf.io/3nkx8/files/osfstorage
 
-In this codebase, the tabular features are used to demonstrate the end-to-end workflow:
-- load CSV features + label
-- train a quantum-kernel model (simulator backend)
-- print train/test diagnostics (confusion matrices, sensitivity/specificity, PPV/NPV)
-- run inference and save prediction CSV outputs
+Files:
+- `demo_data/tabular/raw/FDB.csv` and `demo_data/tabular/raw/LDB.csv` (semicolon-separated)
+- `demo_data/tabular/real_train.csv` (features `f0..fN` + `label`)
+- `demo_data/tabular/real_infer.csv` (features only)
+- `demo_data/tabular/real_feature_map.csv` (maps `f#` to original feature names)
 
-#### NIfTI datasets (synthetic mockups)
+## NIfTI datasets (synthetic mockups)
 
-The NIfTI volumes generated by the example scripts are **randomly-generated mockups**. They exist to validate that:
-- the PET±mask loader works,
-- the amplitude-encoding and QCNN pipelines run,
-- model saving/loading and inference work end-to-end.
+The NIfTI volumes generated by `examples/make_synthetic_nifti.py` are **randomly-generated mockups** intended only to validate:
 
-Since these NIfTI volumes are synthetic, the prediction results of the QCNN models (**muw** or **alt**) are **not** representative of the methods’ real capabilities. Use your own NIfTI datasets (ideally with clinically meaningful VOIs and labels) for any performance assessment.
+- loader correctness (PET±mask pairing)
+- amplitude encoding + QCNN pipeline execution
+- model saving/loading and inference
+- output generation (metrics, SHAP, LIME)
 
-#### Practical recommendation for simulator feasibility
+Since these NIfTI volumes are synthetic, QCNN performance on them is **not** representative of real clinical capability.
+Use your own NIfTI datasets for any meaningful assessment.
 
-Amplitude encoding requires vectors of length `2^n` (padding is applied automatically), and QCNN circuit width is driven by `n_qubits`.
+## Practical recommendation for simulator feasibility
 
-To avoid generating overly complex circuits in a simulator environment:
-- prefer **small NIfTI inputs**, e.g. VOIs around lesions rather than whole-body volumes,
-- consider resampling to a modest target shape (if appropriate),
-- start with small `epochs` and only scale up after the pipeline is stable.
+Circuit width is determined by the amplitude vector length (`2^n` → `n` qubits).
+To avoid overly complex circuits in a simulator environment:
 
-### QCNN variants: muw vs alt
+- keep NIfTI inputs small (VOIs around lesions instead of whole-body volumes)
+- limit training sample counts while debugging (`--max-samples-per-method`)
+- start with few epochs and scale up only after the pipeline is stable
 
-Both QCNN options (**muw** or **alt**) share the same NIfTI loader and preprocessing, but differ in circuit design.
-Here **muw** implies the qCNN models investiaged by the Medical University of Vienna, Applied Quantum Computing Group (laszlo.papp@meduniwien.ac.at) - manuscript reporting the results is currently in review.
+## QCNN variants: muw vs alt
 
+Here, *muw* stands for the QCNN algorithm utilized in Nuclear Medicine studies at the Medical University of Vienna (L. Papp: laszlo.papp@meduniwien.ac.at) - paper is currently in review.
 
-#### muw (MUW-like)
+Both QCNN options:
 
-Core characteristics:
-- amplitude embedding on all qubits
-- repeated convolution + pooling blocks (pairwise IsingXX/YY/ZZ entanglers + controlled pooling)
-- a final **ArbitraryUnitary** block on the remaining pooled qubits
-- output is the probability of measuring `|1⟩` on a designated qubit
+- accept any amplitude-encoded vector (tabular feature vectors or flattened NIfTI volumes)
+- use convolution + pooling blocks on qubits
+- output the probability of measuring `|1⟩` on a designated qubit
 
-Pros:
-- high expressivity at the end due to the ArbitraryUnitary block
-- structurally close to the MUW-style QCNN pattern that motivated this code path
+### muw (MUW-like)
 
-Cons:
-- optimization can be brittle on small datasets or noisy targets (flat gradients / poor conditioning)
-- the ArbitraryUnitary parameterization can make training less stable and slower
+Final head: `qml.ArbitraryUnitary` on pooled qubits (high expressivity) provides prediction outputs.
 
-#### alt (alternative)
+Pros
+- highly expressive final layer
 
-Core characteristics:
-- amplitude embedding on all qubits
-- convolution + pooling blocks
-- a final **StronglyEntanglingLayers** block as the trainable “dense” head
-- output is the probability of measuring `|1⟩` on a designated qubit
+Cons
+- often harder to optimize (flat gradients / instability), especially on small datasets or with few epochs
+- more expensive parameterization in the final block
 
-Pros:
-- usually easier to optimize than a full ArbitraryUnitary head
-- tends to be more stable for quick demonstrations and debugging
+### alt (alternative)
 
-Cons:
-- potentially less expressive than an ArbitraryUnitary head in the final pooled space
-- still subject to simulator scaling limits as `n_qubits` grows
+Final head: `qml.templates.StronglyEntanglingLayers` on pooled qubits (typically more stable) provides prediction probabilities.
+
+Pros
+- generally easier to optimize and more stable for demos/debugging
+
+Cons
+- potentially less expressive than an ArbitraryUnitary head in the pooled subspace
+
+## Results output contract
+
+For each dataset run, the runner writes:
+
+### Summary metrics CSV (required)
+
+`Results/<dataset_name>__results.csv`
+
+Rows:
+- one row per AI method
+
+Columns include (train and test prefixes):
+- confusion matrix counts: `tn, fp, fn, tp`
+- sensitivity, specificity, PPV, NPV
+- accuracy, AUC, balanced accuracy
+- bookkeeping: `n_train_used`, `n_test`, `n_qubits`, `pad_len`
+
+Threshold note (important):
+- AUC is threshold-free.
+- Confusion-matrix-derived metrics (accuracy, sensitivity, specificity, PPV, NPV, balanced accuracy) depend on the **decision threshold** applied to `prob_1`.
+- If the code selects a non-0.5 decision threshold (for improved balanced accuracy), this value is recorded in the run metadata and/or results.
+
+### Per-method artifacts
+
+`Results/<dataset_name>/<method>/`
+
+- `predictions/train.csv`, `predictions/test.csv`, optionally `predictions/infer.csv`
+  - columns include `id`, `prob_1`, `pred_01`, `pred_label` and, when available, `true_label`
+- `model/metadata.json` and model weights
+- `explain/shap/` and `explain/lime/` outputs (after running `bash examples/run_explain_all.sh`)
+
+## Determinism (repeatable runs)
+
+Runs are seeded and should be repeatable on the same machine.
+
+- Default seed: `0`
+- Override with: `--seed <int>`
+
+The CLI also sets common BLAS thread pools to 1 thread (best-effort) to reduce nondeterministic floating-point reductions.
+
+If you enable `--shots` (finite sampling), results become stochastic by design unless you also control sampling seeds.

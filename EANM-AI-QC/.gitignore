@@ -1,7 +1,6 @@
 .venv/
 __pycache__/
 *.pyc
+Results/
 models/
 outputs/
-demo_data/
-*.dill

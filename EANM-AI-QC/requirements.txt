@@ -5,10 +5,5 @@ joblib
 pennylane
 nibabel
 scipy
-
-# optional tabular backend
-qiskit
-qiskit-machine-learning
-
-# optional paper datasets
-ucimlrepo
+shap
+lime
