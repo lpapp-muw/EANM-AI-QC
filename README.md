@@ -307,7 +307,7 @@ Pros
 Cons
 - potentially less expressive than an ArbitraryUnitary head in the pooled subspace
 
-## Results output contract
+## Results output
 
 For each dataset run, the runner writes:
 
