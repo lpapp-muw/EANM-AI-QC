@@ -7,7 +7,7 @@ The repository is intended to be updated regularly, with eventually having an EA
 > The Dawn of Quantum AI in Nuclear Medicine: an EANM Perspective. L. Papp, D. Visvikis, M. Sollini, K. Shi, M. Kirienko. The EANM Journal, 2026.
 
 
-If you are new to the topic of QC, we recommend to process this repository from top-to-bottom, by following up with the contents below.
+If you are new to the topic of QC, we recommend to process this repository from top-to-bottom, by following the contents below.
 
 If you are ready to engage with our source code which is custom-tailored for Nuclear Medicine use cases, see
 [Section `Nuclear Medicine Use Cases (Code)`](#nuclear-medicine-use-cases-code).
