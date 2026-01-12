@@ -31,7 +31,7 @@ Veritasium has multiple videos about QC and quantum mechanics, utilizing beautif
 
 - [Parallel Worlds Probably Exist. Here’s Why](https://www.youtube.com/watch?v=kTXTPe3wahc)
 
-Quantum Computers, Explained Cleo Abram (Huge If True).Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
+Quantum Computers, Explained Cleo Abram (Huge If True). Clear explanations of qubits vs bits, why quantum computers are important, and applications like simulating molecules for medicine:
 - [Quantum Computers, explained with MKBHD](https://www.youtube.com/watch?v=e3fz3dqhN44)
 
 A visually rich exploration of quantum computing through the lens of math. 3Blue1Brown derives how qubit state vectors work and walks through Grover’s search algorithm step by step (advanced):
@@ -98,7 +98,6 @@ Quantum Computing in Medicine (2024) – James C. L. Chow – Medical Sciences (
 [Link](https://pmc.ncbi.nlm.nih.gov/articles/PMC11586987/)
 
 For reading a large selection of QC papers related to AI/ML, we recommend to follow-up with Christophe Pere's git repository which is actively maintained:
-
 https://github.com/Christophe-pere/Roadmap-to-QML
 
 ## Nuclear Medicine Use Cases (Code)
