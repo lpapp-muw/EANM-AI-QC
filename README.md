@@ -126,10 +126,6 @@ claryon -v run -c config.yaml
 
 See the [CLARYON README](https://github.com/lpapp-muw/CLARYON) for full documentation, installation, and usage instructions.
 
-### PSMA-11 PET Radiomics Dataset
-
-A real, anonymized dataset containing **PSMA-11 PET radiomic features** from primary prostate lesions with binary Gleason risk labels is included in the CLARYON repository under `demo_data/tabular/`. Original source: [https://osf.io/3nkx8/files/osfstorage](https://osf.io/3nkx8/files/osfstorage)
-
 ---
 
 ## Related Repositories
@@ -137,8 +133,6 @@ A real, anonymized dataset containing **PSMA-11 PET radiomic features** from pri
 | Repository | Description |
 |---|---|
 | [CLARYON](https://github.com/lpapp-muw/CLARYON) | Production framework — all models, pipeline, evaluation, reporting, datasets |
-| [Quantum-Machine-learning](https://github.com/sassan72/Quantum-Machine-learning) | Quantum distance classifier and simplified kernel SVM (Moradi et al., 2022) |
-| [learning-with-Quantum-machines](https://github.com/sassan72/learning-with-Quantum-machines) | Quantum GP, QNN, and error mitigation (Moradi et al., 2023) |
 | [Roadmap to QML](https://github.com/Christophe-pere/Roadmap-to-QML) | Curated collection of QC/QML papers |
 
 ---
