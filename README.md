@@ -1,8 +1,6 @@
 # EANM AI Committee — Quantum Computing Engagement Resources
 
-The EANM (European Association of Nuclear Medicine) AI Committee works to advance the application of artificial intelligence and quantum computing in nuclear medicine research and clinical practice.
-
-This repository contains teaching material, tutorials, and educational videos for those interested in engaging with quantum computing (QC) within the EANM. The collection is intended for beginners with little to no knowledge in QC, as well as advanced materials with hands-on tutorials and code repositories.
+This repository contains teaching material, tutorials, and educational videos for those interested in engaging with quantum computing (QC) within the European Association of Nuclear Medicine (EANM). The collection is intended for beginners with little to no knowledge in QC, as well as advanced materials with hands-on tutorials and code repositories.
 
 The initial version was made for the perspective paper:
 
@@ -116,7 +114,7 @@ CLARYON provides:
 - Geometric Difference score for quantum advantage assessment (Huang et al., 2021)
 - Model complexity presets (quick/small/medium/large/exhaustive/auto) for non-expert users
 - NIfTI medical imaging support
-- 12 curated medical benchmark datasets
+- 12 curated medical benchmark datasets including a real PSMA-11 PET radiomics dataset
 - Inference mode for deploying trained models on new patient data
 
 ### Quick start
@@ -128,59 +126,22 @@ claryon -v run -c config.yaml
 
 See the [CLARYON README](https://github.com/lpapp-muw/CLARYON) for full documentation, installation, and usage instructions.
 
+### PSMA-11 PET Radiomics Dataset
+
+A real, anonymized dataset containing **PSMA-11 PET radiomic features** from primary prostate lesions with binary Gleason risk labels is included in the CLARYON repository under `demo_data/tabular/`. Original source: [https://osf.io/3nkx8/files/osfstorage](https://osf.io/3nkx8/files/osfstorage)
+
 ---
 
-## PSMA-11 PET Radiomics Dataset
+## Related Repositories
 
-This repository includes a real, anonymized tabular dataset containing **PSMA-11 PET radiomic features** extracted from **primary prostate lesions**, with a binary label for **Gleason risk prediction**.
-
-**Source**: [https://osf.io/3nkx8/files/osfstorage](https://osf.io/3nkx8/files/osfstorage)
-
-| File | Description |
+| Repository | Description |
 |---|---|
-| `demo_data/tabular/raw/FDB.csv` | Original feature database (306 radiomic features) |
-| `demo_data/tabular/raw/LDB.csv` | Original label database (binary Gleason risk) |
-| `demo_data/tabular/real_train.csv` | Preprocessed training set (f0..f305 + label) |
-| `demo_data/tabular/real_infer.csv` | Inference set (features only) |
-| `demo_data/tabular/real_feature_map.csv` | Maps f0..f305 to original radiomic feature names |
-
-### Using this dataset with CLARYON
-
-```yaml
-experiment:
-  name: psma_prostate
-  seed: 42
-  complexity: medium
-
-data:
-  tabular:
-    path: demo_data/tabular/real_train.csv
-    label_col: label
-    sep: ";"
-
-models:
-  - name: xgboost
-    type: tabular
-  - name: kernel_svm
-    type: tabular_quantum
-  - name: qcnn_muw
-    type: tabular_quantum
-
-evaluation:
-  metrics: [bacc, auc, sensitivity, specificity]
-
-reporting:
-  latex: true
-  markdown: true
-```
-
-```bash
-pip install claryon[all]
-claryon -v run -c psma_config.yaml
-```
+| [CLARYON](https://github.com/lpapp-muw/CLARYON) | Production framework — all models, pipeline, evaluation, reporting, datasets |
+| [Quantum-Machine-learning](https://github.com/sassan72/Quantum-Machine-learning) | Quantum distance classifier and simplified kernel SVM (Moradi et al., 2022) |
+| [learning-with-Quantum-machines](https://github.com/sassan72/learning-with-Quantum-machines) | Quantum GP, QNN, and error mitigation (Moradi et al., 2023) |
+| [Roadmap to QML](https://github.com/Christophe-pere/Roadmap-to-QML) | Curated collection of QC/QML papers |
 
 ---
-
 
 ## References
 
@@ -206,7 +167,7 @@ claryon -v run -c psma_config.yaml
 
 ## History
 
-This repository originally contained the EANM-AI-QC source code (v0.8.0), a quantum ML framework for nuclear medicine. In 2026, the codebase was consolidated into [CLARYON](https://github.com/lpapp-muw/CLARYON), which extends it with classical models, preprocessing, feature selection, model presets, benchmark datasets, and publication-ready reporting. This repository is retained as an educational hub, and as a collection of teaching resources for the EANM AI Committee.
+This repository originally contained the EANM-AI-QC source code (v0.8.0), a quantum ML framework for nuclear medicine. In 2026, the codebase was consolidated into [CLARYON](https://github.com/lpapp-muw/CLARYON), which extends it with classical models, preprocessing, feature selection, model presets, benchmark datasets, and publication-ready reporting. This repository is retained as an educational hub and collection of teaching resources for the EANM AI Committee.
 
 ---
 
