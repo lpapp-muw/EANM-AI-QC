@@ -106,7 +106,7 @@ All source code for quantum and classical ML in nuclear medicine has been consol
 **Repository**: [https://github.com/lpapp-muw/CLARYON](https://github.com/lpapp-muw/CLARYON)
 
 CLARYON provides:
-- 21 registered models (gradient boosting, neural networks, 9 quantum ML methods, CNNs)
+- 20 registered models (gradient boosting, neural networks, 9 quantum ML methods, CNNs)
 - YAML-driven experiment pipeline with reproducible cross-validation
 - mRMR feature selection and preprocessing (automatically adapted for quantum models)
 - SHAP and LIME explainability with publication-ready plots
@@ -114,7 +114,7 @@ CLARYON provides:
 - Geometric Difference score for quantum advantage assessment (Huang et al., 2021)
 - Model complexity presets (quick/small/medium/large/exhaustive/auto) for non-expert users
 - NIfTI medical imaging support
-- 12 curated medical benchmark datasets including a real PSMA-11 PET radiomics dataset
+- 6 included datasets (Wisconsin Breast Cancer, Cervical Cancer, HCC Survival, PSMA-11 PET radiomics, Iris, synthetic NIfTI) — ready to use, no download required
 - Inference mode for deploying trained models on new patient data
 
 ### Quick start
@@ -133,11 +133,17 @@ See the [CLARYON README](https://github.com/lpapp-muw/CLARYON) for full document
 | Repository | Description |
 |---|---|
 | [CLARYON](https://github.com/lpapp-muw/CLARYON) | Production framework — all models, pipeline, evaluation, reporting, datasets |
+| [Quantum-Machine-learning](https://github.com/sassan72/Quantum-Machine-learning) | Quantum distance classifier and simplified kernel SVM (Moradi et al., 2022) |
+| [learning-with-Quantum-machines](https://github.com/sassan72/learning-with-Quantum-machines) | Quantum GP, QNN, and error mitigation (Moradi et al., 2023) |
 | [Roadmap to QML](https://github.com/Christophe-pere/Roadmap-to-QML) | Curated collection of QC/QML papers |
 
 ---
 
 ## References
+
+### EANM Perspective
+
+- Papp L, Visvikis D, Sollini M, Shi K, Kirienko M. "The Dawn of Quantum AI in Nuclear Medicine: an EANM Perspective." *The EANM Journal*, 2026 (in revision). CLARYON is the official code repository for this manuscript.
 
 ### Quantum ML in Nuclear Medicine
 
@@ -146,6 +152,10 @@ See the [CLARYON README](https://github.com/lpapp-muw/CLARYON) for full document
 - Moradi S, Spielvogel C, Krajnc D, Brandner C, Hillmich S, Wille R, Traub-Weidinger T, Li X, Hacker M, Drexler W, Papp L. "Error mitigation enables PET radiomic cancer characterization on quantum computers." *Eur J Nucl Med Mol Imaging* 50, 3826-3837 (2023). [https://doi.org/10.1007/s00259-023-06362-6](https://doi.org/10.1007/s00259-023-06362-6)
 
 - Papp L, et al. "Quantum Convolutional Neural Networks for Predicting ISUP Grade risk in [68Ga]Ga-PSMA Primary Prostate Cancer Patients." Under revision.
+
+### PET Radiomics
+
+- Papp L, Spielvogel CP, Grubmuller B, et al. "Supervised machine learning enables non-invasive lesion characterization in primary prostate cancer with [68Ga]Ga-PSMA-11 PET/MRI." *Eur J Nucl Med Mol Imaging* 48, 1795-1805 (2021). [https://doi.org/10.1007/s00259-020-05140-y](https://doi.org/10.1007/s00259-020-05140-y)
 
 ### Quantum Advantage Assessment
 
