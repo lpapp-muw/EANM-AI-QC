@@ -106,16 +106,17 @@ All source code for quantum and classical ML in nuclear medicine has been consol
 **Repository**: [https://github.com/lpapp-muw/CLARYON](https://github.com/lpapp-muw/CLARYON)
 
 CLARYON provides:
-- 20 registered models (gradient boosting, neural networks, 9 quantum ML methods, CNNs)
+- 16 registered models (gradient boosting, neural networks, 8 quantum ML methods, 3D CNNs) plus ensemble aggregation
+- Angle-encoded and amplitude-encoded quantum models with automatic preprocessing adaptation
 - YAML-driven experiment pipeline with reproducible cross-validation
-- mRMR feature selection and preprocessing (automatically adapted for quantum models)
+- mRMR feature selection and preprocessing inside the CV loop (no data leakage)
 - SHAP and LIME explainability with publication-ready plots
 - Structured LaTeX methods and results sections auto-generated from config
-- Geometric Difference score for quantum advantage assessment (Huang et al., 2021)
 - Model complexity presets (quick/small/medium/large/exhaustive/auto) for non-expert users
-- NIfTI medical imaging support
-- 6 included datasets (Wisconsin Breast Cancer, Cervical Cancer, HCC Survival, PSMA-11 PET radiomics, Iris, synthetic NIfTI) — ready to use, no download required
+- NIfTI medical imaging support (3D CNNs, amplitude-encoded quantum circuits on flattened volumes)
+- 6 included datasets (Wisconsin Breast Cancer, Cervical Cancer, HCC Survival, PSMA-11 PET radiomics, Iris, synthetic NIfTI)
 - Inference mode for deploying trained models on new patient data
+- Benchmark results: angle-encoded quantum models achieve classical-competitive performance on three clinical datasets
 
 ### Quick start
 
