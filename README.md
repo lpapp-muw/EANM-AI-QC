@@ -152,8 +152,6 @@ See the [CLARYON README](https://github.com/lpapp-muw/CLARYON) for full document
 
 - Moradi S, Spielvogel C, Krajnc D, Brandner C, Hillmich S, Wille R, Traub-Weidinger T, Li X, Hacker M, Drexler W, Papp L. "Error mitigation enables PET radiomic cancer characterization on quantum computers." *Eur J Nucl Med Mol Imaging* 50, 3826-3837 (2023). [https://doi.org/10.1007/s00259-023-06362-6](https://doi.org/10.1007/s00259-023-06362-6)
 
-- Papp L, et al. "Quantum Convolutional Neural Networks for Predicting ISUP Grade risk in [68Ga]Ga-PSMA Primary Prostate Cancer Patients." Under revision.
-
 ### PET Radiomics
 
 - Papp L, Spielvogel CP, Grubmuller B, et al. "Supervised machine learning enables non-invasive lesion characterization in primary prostate cancer with [68Ga]Ga-PSMA-11 PET/MRI." *Eur J Nucl Med Mol Imaging* 48, 1795-1805 (2021). [https://doi.org/10.1007/s00259-020-05140-y](https://doi.org/10.1007/s00259-020-05140-y)
