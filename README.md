@@ -104,28 +104,33 @@ For a large, actively maintained collection of QC papers related to AI/ML, see C
 All source code for quantum and classical ML in nuclear medicine has been consolidated into **CLARYON** (CLassical-quantum AI for Reproducible Explainable OpeN-source medicine):
 
 **Repository**: [https://github.com/lpapp-muw/CLARYON](https://github.com/lpapp-muw/CLARYON)
+**Current release**: v0.13.0
 
 CLARYON provides:
-- 16 registered models (gradient boosting, neural networks, 8 quantum ML methods, 3D CNNs) plus ensemble aggregation
-- Angle-encoded and amplitude-encoded quantum models with automatic preprocessing adaptation
+- 14 registered models (gradient boosting tabular, MLP, TabPFN, 6 quantum ML methods, 2D/3D CNNs and L2-CNN variants), plus 2 WIP qCNN variants under active development
 - YAML-driven experiment pipeline with reproducible cross-validation
-- mRMR feature selection and preprocessing inside the CV loop (no data leakage)
+- Multi-source split strategies (SCST, LOCO) and image-level harmonization (Nyul-Udupa)
+- mRMR feature selection and preprocessing (automatically adapted for quantum models)
 - SHAP and LIME explainability with publication-ready plots
 - Structured LaTeX methods and results sections auto-generated from config
+- Geometric Difference score for quantum advantage assessment (Huang et al., 2021)
 - Model complexity presets (quick/small/medium/large/exhaustive/auto) for non-expert users
-- NIfTI medical imaging support (3D CNNs, amplitude-encoded quantum circuits on flattened volumes)
-- 6 included datasets (Wisconsin Breast Cancer, Cervical Cancer, HCC Survival, PSMA-11 PET radiomics, Iris, synthetic NIfTI)
+- NIfTI medical imaging support, including 3D Hilbert-curve flattening for amplitude-encoded volumetric models
+- 6 included datasets (Wisconsin Breast Cancer, Cervical Cancer, HCC Survival, PSMA-11 PET radiomics, Iris, synthetic NIfTI) — ready to use, no download required
 - Inference mode for deploying trained models on new patient data
-- Benchmark results: angle-encoded quantum models achieve classical-competitive performance on three clinical datasets
 
 ### Quick start
 
+CLARYON is currently distributed as source from the GitHub repository. The bundled installer handles the PyTorch (CPU/GPU) and pyradiomics edge cases automatically.
+
 ```bash
-pip install claryon[all]
+git clone https://github.com/lpapp-muw/CLARYON.git
+cd CLARYON
+bash scripts/install.sh --no-radiomics --cpu-only
 claryon -v run -c config.yaml
 ```
 
-See the [CLARYON README](https://github.com/lpapp-muw/CLARYON) for full documentation, installation, and usage instructions.
+For GPU PyTorch or with pyradiomics enabled, drop the corresponding flag. Windows users: a PowerShell installer (`scripts/install.ps1`) is provided with the same flags. See the [CLARYON README](https://github.com/lpapp-muw/CLARYON) for full documentation, configuration reference, and the included example configs.
 
 ---
 
