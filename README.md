@@ -149,7 +149,7 @@ For GPU PyTorch or with pyradiomics enabled, drop the corresponding flag. Window
 
 ### EANM Perspective
 
-- Papp L, Visvikis D, Sollini M, Shi K, Kirienko M. "The Dawn of Quantum AI in Nuclear Medicine: an EANM Perspective." *The EANM Journal*, 2026 (in revision). CLARYON is the official code repository for this manuscript.
+- Papp L, Visvikis D, Sollini M, Shi K, Kirienko M. "The dawn of quantum AI in nuclear medicine: an EANM perspective." The EANM Journal 3, 100227 (2026). [https://doi.org/10.1016/j.eanmj.2026.100227](https://doi.org/10.1016/j.eanmj.2026.100227).
 
 ### Quantum ML in Nuclear Medicine
 
